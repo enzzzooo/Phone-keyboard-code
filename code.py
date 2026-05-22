@@ -1,4 +1,6 @@
-pairs = {
+from func_to_web import run
+def func(inputS: str)-> str:
+    pairs = {
     "1": "q",
     "2": "w",
     "3": "e",
@@ -25,9 +27,8 @@ pairs = {
     "!": "n",
     "'": "m",
     " ": " "
-}
-inputS = input("Enter code ")
-decoded = ""
-for letter in inputS:
-    decoded += pairs.get(letter, letter)
-print(decoded)
+    }
+    decoded = ""
+    for letter in inputS:
+        decoded += pairs.get(letter, letter)
+    return decoded
